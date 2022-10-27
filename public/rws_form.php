@@ -1,7 +1,5 @@
 <?php
 
-
-
 function rws_form() {
     return '
         <h3>Оставьте отзыв</h3>
