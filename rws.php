@@ -17,9 +17,9 @@ require_once RWS_DIR . '/rws_hooks.php';
 require_once RWS_DIR . '/admin/rws_post_fields.php';
 require_once RWS_DIR . '/admin/rws_menu.php';
 
-function rws_activated() {
-    rws_creating_menu();
-}
-
 register_activation_hook(__FILE__, 'rws_activated');
+
+function rws_activated() {
+    
+}
 ?>

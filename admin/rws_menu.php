@@ -20,4 +20,6 @@ function rws_creating_menu() {
     }
 }
 
+rws_creating_menu();
+
 ?>
