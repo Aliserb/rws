@@ -1,0 +1,9 @@
+.rws_post_field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.rws_post_field label {
+    margin-bottom: 10px;
+}

@@ -10,7 +10,7 @@ function rws_form() {
                     Тема
                 </label>
 
-                <input type="text" id="rws_title" name="rws_name">
+                <input type="text" id="rws_title" name="rws_title">
             </div>
 
             <div class="rws_form_input">

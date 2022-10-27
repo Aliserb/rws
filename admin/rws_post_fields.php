@@ -10,27 +10,21 @@ function my_extra_fields() {
 // код блока
 function extra_fields_box_func( $post ){
 	?>
-	<p><label><input type="text" name="extra[title]" value="<?php echo get_post_meta($post->ID, 'title', 1); ?>" style="width:50%" /> ? заголовок страницы (title)</label></p>
+    <div class="rws_post_field">
+        <label for="rws_name">
+            Имя
+        </label>
 
-	<p>Описание статьи (description):
-		<textarea type="text" name="extra[description]" style="width:100%;height:50px;"><?php echo get_post_meta($post->ID, 'description', 1); ?></textarea>
-	</p>
+        <input type="text" name="extra[rws_name]" id="rws_name" value="<?php echo get_post_meta($post->ID, 'rws_name', 1); ?>">
+    </div>
 
-	<p>Видимость поста: <?php $mark_v = get_post_meta($post->ID, 'robotmeta', 1); ?>
-		 <label><input type="radio" name="extra[robotmeta]" value="" <?php checked( $mark_v, '' ); ?> /> index,follow</label>
-		 <label><input type="radio" name="extra[robotmeta]" value="nofollow" <?php checked( $mark_v, 'nofollow' ); ?> /> nofollow</label>
-		 <label><input type="radio" name="extra[robotmeta]" value="noindex" <?php checked( $mark_v, 'noindex' ); ?> /> noindex</label>
-		 <label><input type="radio" name="extra[robotmeta]" value="noindex,nofollow" <?php checked( $mark_v, 'noindex,nofollow' ); ?> /> noindex,nofollow</label>
-	</p>
+    <div class="rws_post_field">
+        <label for="rws_social_links">
+            Ссылка на социальные сети
+        </label>
 
-	<p><select name="extra[select]">
-			<?php $sel_v = get_post_meta($post->ID, 'select', 1); ?>
-			<option value="0">----</option>
-			<option value="1" <?php selected( $sel_v, '1' )?> >Выбери меня</option>
-			<option value="2" <?php selected( $sel_v, '2' )?> >Нет, меня</option>
-			<option value="3" <?php selected( $sel_v, '3' )?> >Лучше меня</option>
-		</select> ? выбор за вами</p>
-
+        <input type="text" name="extra[social_links]" id="rws_social_links" value="<?php echo get_post_meta($post->ID, 'social_links', 1); ?>">
+    </div>
 	<input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
 	<?php
 }

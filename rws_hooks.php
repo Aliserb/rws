@@ -14,4 +14,10 @@ function rws_register() {
 }
 add_action('wp_enqueue_scripts', 'rws_register');
 
+
+add_action( 'admin_enqueue_scripts', 'rws_style_admin', 25 );
+ 
+function rws_style_admin() {
+ 	wp_enqueue_style( 'true_stili', RWS_URL . 'admin/css/rws_style.css' );
+}
 ?>
