@@ -9,13 +9,19 @@ jQuery( function( $ ){
                 type: "POST",
                 data: filter.serialize(),
                 error:function(){
-                    console.log('Ошибка');
+                    $('.rws_form_error').addClass('active');
+                    $('.rws_form_loading').removeClass('active');
+                    $('.rws_form_success').removeClass('active');
                 },                 
                 beforeSend: function() {                     
-                    console.log('Загрузка')               
+                    $('.rws_form_loading').addClass('active');
+                    $('.rws_form_error').removeClass('active');
+                    $('.rws_form_success').removeClass('active');
                 },                 
                 success: function(){    
-                    console.log('успешно');           
+                    $('.rws_form_success').addClass('active');    
+                    $('.rws_form_loading').removeClass('active');
+                    $('.rws_form_error').removeClass('active');     
                 }  
             });
         });

@@ -1,0 +1,78 @@
+@import url("../fonts/montserrat/stylesheet.css");
+
+.rws_form_box {
+    background: #808080;
+    padding: 40px 40px;
+    border-radius: 20px;
+}
+
+.rws_form_input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.rws_form_input:first-child {
+    margin-top: 0;
+}
+
+.rws_form_input label {
+    margin-bottom: 10px;
+}
+
+.rws_form_input input {
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    padding: 14px 16px;
+    font: normal 400 14px/17px Montserrat;
+    color: #4F4F4F;
+    outline: none;
+}
+
+.rws_form_input label {
+    font: normal 400 14px/17px Montserrat;
+    color: #fff;
+}
+
+.rws_form button {
+    width: 290px;
+    padding: 14px;
+    background: #FF7E77;
+    border-radius: 4px;
+    font: normal 600 14px/17px Montserrat;
+    color: #FFFFFF;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.rws_form button:hover {
+    background: #FF7E8F;
+}
+
+.rws_form_notice {
+    padding: 20px;
+    border-radius: 20px;
+    font: normal 600 14px/17px Montserrat;
+    color: #FFFFFF;
+    display: none;
+}
+
+.rws_form_success {
+    background: #008000;
+}
+
+.rws_form_loading {
+    background: #FF6347;
+}
+
+.rws_form_error {
+    background: #DC143C;
+}
+
+.rws_form_success.active,
+.rws_form_loading.active,
+.rws_form_error.active {
+    display: block;
+}
